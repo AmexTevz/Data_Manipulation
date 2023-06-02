@@ -72,6 +72,7 @@ else:
         )
 
         cursor = con.cursor()
+        cursor.execute(f"DROP TABLE IF EXISTS {table_name};")
         cursor.execute(f"CREATE TABLE {table_name} {database_headers};")
         for _ in range(quantity):
             cursor.execute(f"INSERT INTO {table_name} {database_inserts}\nVALUES {value_generator()}")
