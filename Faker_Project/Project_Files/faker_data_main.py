@@ -14,7 +14,8 @@ else:
     # Type headers from the headers list above. Use space in between.
     headers = list(input('What are the COLUMNS? :  ').replace(',',' ').split(' '))
     filename = input('CSV File Name? :')  # Choose the CSV file name or leave it blank.
-    csv_file_path = f'PATH TO YOU DIRECTORY/{filename}.csv'
+    
+    csv_file_path = f'PATH TO YOU DIRECTORY/{filename}.csv' # Insert the PATH to directory.
 
     num = 1
 
@@ -62,7 +63,7 @@ else:
     table_name = input('\n\nTable Name For The SQL?: ')  # Will skip the table creation if left blank.
 
     if table_name != '':
-
+        # Insert your PostgreSQL Credentials below.
         con = psycopg2.connect(
             database="Database Name",
             user="postgres",
